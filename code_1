@@ -1,0 +1,14 @@
+function solveQuadratic(a, b, c) {
+  let discriminant = b * b - 4 * a * c;
+  
+  if (discriminant < 0) {
+    console.log("This equation has no real solutions.");
+  } else if (discriminant === 0) {
+    let x = -b / (2 * a);
+    console.log(`This equation has one solution: x = ${x}`);
+  } else {
+    let x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    let x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    console.log(`This equation has two solutions: x = ${x1} and x = ${x2}`);
+  }
+}
